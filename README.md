@@ -29,7 +29,7 @@ academic system (unified identity authentication).
 
 两种方式：
 
-1. **直接用发布包**：从 Releases 下载 `XAUAT-Classes.exe`（自包含单文件，不需要安装 .NET），双击即可。
+1. **自包含单文件**：`dotnet publish` 出来的 `XAUAT-Classes.exe`（约 166 MB）双击即用，不需要安装 .NET 运行时。
 2. **自己编译**：
 
 ```bash
