@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>   <!-- 仅用于托盘 NotifyIcon -->
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>XauatSchedule</RootNamespace>
+    <AssemblyName>XAUAT-Classes</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- exe 图标：资源管理里显示的就是这个（同时也是窗口/托盘图标） -->
+    <ApplicationIcon>Resources\app.ico</ApplicationIcon>
+    <SatelliteResourceLanguages>zh-Hans;en</SatelliteResourceLanguages>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <Version>1.1.0</Version>
+    <Product>XAUAT-Classes</Product>
+    <AssemblyTitle>XAUAT-Classes</AssemblyTitle>
+    <NoWarn>$(NoWarn);CA1416;WFO0003</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- WinForms 只用于托盘图标；它的隐式 using 会和 WPF 的同名类型（Color/Point/MouseEventArgs）打架，
+         所以把这两个全局 using 去掉，需要的文件里自己精确引用。 -->
+    <Using Remove="System.Windows.Forms" />
+    <Using Remove="System.Drawing" />
+    <Resource Include="Resources\app.ico" />
+  </ItemGroup>
+
+</Project>

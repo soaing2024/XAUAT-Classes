@@ -1,0 +1,38 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- 字体：Inter 优先，中文回落系统中文字体（WPF 不发散字体请求，直接列族名） -->
+    <FontFamily x:Key="UiFont">Inter, Microsoft YaHei UI, Segoe UI, PingFang SC</FontFamily>
+    <FontFamily x:Key="MonoFont">Cascadia Mono, Consolas, Microsoft YaHei UI</FontFamily>
+
+    <!-- 字号阶梯：大标题负字距、正文接近 0（苹果的 tracking 规则） -->
+    <system:Double xmlns:system="clr-namespace:System;assembly=mscorlib" x:Key="Size.Display">26</system:Double>
+    <system:Double xmlns:system="clr-namespace:System;assembly=mscorlib" x:Key="Size.Title">17</system:Double>
+    <system:Double xmlns:system="clr-namespace:System;assembly=mscorlib" x:Key="Size.Body">13</system:Double>
+    <system:Double xmlns:system="clr-namespace:System;assembly=mscorlib" x:Key="Size.Caption">11</system:Double>
+    <system:Double xmlns:system="clr-namespace:System;assembly=mscorlib" x:Key="Size.Tiny">9.5</system:Double>
+
+    <!-- 形状 -->
+    <CornerRadius x:Key="Radius.Card">14</CornerRadius>
+    <CornerRadius x:Key="Radius.Chip">9</CornerRadius>
+    <CornerRadius x:Key="Radius.Pill">999</CornerRadius>
+    <!-- 按钮统一圆角矩形（不再用胶囊） -->
+    <CornerRadius x:Key="Radius.Button">9</CornerRadius>
+
+    <!-- 动效时长（与 MotionEngine 里的弹簧参数配套，仅用于极少数 CSS 式过渡） -->
+    <Duration x:Key="Dur.Fast">0:0:0.14</Duration>
+    <Duration x:Key="Dur.Base">0:0:0.2</Duration>
+
+    <!-- 主题色占位：运行时由 ThemeService 按当前 Palette 覆盖这些键 -->
+    <SolidColorBrush x:Key="BgBrush" Color="#F7F2EB" />
+    <SolidColorBrush x:Key="SurfaceBrush" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="SurfaceHoverBrush" Color="#F1ECE2" />
+    <SolidColorBrush x:Key="TextBrush" Color="#081F5C" />
+    <SolidColorBrush x:Key="TextMutedBrush" Color="#4A5C86" />
+    <SolidColorBrush x:Key="BorderBrush" Color="#DDD6C9" />
+    <SolidColorBrush x:Key="DataBrush" Color="#334EAC" />
+    <SolidColorBrush x:Key="Data2Brush" Color="#7096D1" />
+    <SolidColorBrush x:Key="HeroBrush" Color="#081F5C" />
+    <SolidColorBrush x:Key="OnDataBrush" Color="#FFFFFF" />
+
+</ResourceDictionary>

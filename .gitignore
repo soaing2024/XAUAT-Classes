@@ -1,0 +1,26 @@
+# 构建产物
+bin/
+obj/
+publish/
+
+# 用户数据（本地课表与凭据，绝不入库）
+schedule.json
+*.broken-*
+.cookie
+
+# 诊断输出
+xauat-*.txt
+spa-js.txt
+spa-course-table.js
+course-table.html
+menu.json
+
+# IDE
+.vs/
+.idea/
+*.user
+*.suo
+
+# 系统
+Thumbs.db
+desktop.ini
